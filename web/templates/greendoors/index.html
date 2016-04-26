@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
+{% endblock css %}
+{% block page_title %}Digital Greendoors{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+{#    <div class="col-xs-5 col-sm-5 col-md-4">#}
+{#        <div class="box">#}
+{#            <h5 class="box-title">Next Event</h5>#}
+{##}
+{#            <div class="box-content">#}
+{#                <p>13-14 September</p>#}
+{#                <a href="http://www.bristolgreendoors.org/"><img id="bgd-event-banner" src="{{ STATIC_URL }}/img/BGD_logo_RGB.jpg"#}
+{#                                                                 width="145"></a>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class="col-xs-7 col-sm-7 col-md-8">
+        <p>Digital Green Doors is a University of Bristol research project investigating how technology can be used
+            to help people gather information about retrofitting.</p>
+
+
+{#        <p>Want to participate in the project? You’ll have the opportunity to earn gift vouchers for your time –#}
+{#            contact <a href="mailto:elaine.massung@bristol.ac.uk">Elaine</a> for more information.</p>#}
+    </div>
+{% endblock content %}

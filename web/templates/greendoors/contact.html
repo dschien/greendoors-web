@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
+{% endblock css %}
+{% block page_title %}Digital Greendoors{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+    <div>
+        <span class="highlight">Elaine Massung</span> (<a href="mailto:elaine.massung@bristol.ac.uk">elaine.massung@bristol.ac.uk</a>)
+        <p>Please contact Elaine if you have any questions about Digital Green Doors or if you would like to participate in
+        the research project.</p>
+    </div>
+
+    <div>
+        <span class="highlight">Dan Schien</span> (<a href="mailto:daniel.schien@bristol.ac.uk">daniel.schien@bristol.ac.uk</a>)
+        <p>Drop Dan a line if you are having technical problems with the Greendoors app.</p>
+    </div>
+
+
+{% endblock content %}

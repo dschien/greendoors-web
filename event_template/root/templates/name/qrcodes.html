@@ -1,0 +1,35 @@
+{% extends "base-<%= name %>.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+{% block page_title %}<%= webtitle %>{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+
+<div class="row">
+
+    <!-- main content -->
+    <div class="col-md-12">
+
+
+        <p>
+            You may have seen QR codes in magazines or on advertisements: when scanned by a smartphone, the barcodes
+            will automatically trigger an activity such as displaying a website, showing a photo, or playing a
+            sound.</p>
+
+        <p>Digital Green Doors is trying something a little different. Rather than Quick Response, when QR codes are
+            scanned using the scanner within the Greendoors app, they are saved to produce <a href="reports.html">a
+                personalised report</a> about the associated retrofitting measures.</p>
+
+        <p>Households that have provided enough information about their retrofitting measures will be given QR codes to
+            display during the event of 15-16 March.</p>
+
+        <img src="{% static '<%= name %>/assets/qrcard_FOH.jpg'%}">
+    </div>
+</div>
+
+{% endblock %}

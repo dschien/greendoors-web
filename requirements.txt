@@ -1,0 +1,45 @@
+Django>=1.5,<1.6
+South>=1
+# MySQL-python
+psycopg2
+openPyxl==1.6.2
+simplejson
+django-extensions
+# checkout restframework from own repo b/c booleanfield is broken
+# git+git://github.com/dschien/django-rest-framework@0.1.0
+djangorestframework==2.3.7
+django-cookie-law
+# django-filter==0.7
+django-oauth2-provider==0.2.6
+# django-ssl-redirect=0.1.1
+# for CORS
+django-cors-headers==0.11
+
+# for email templating
+jinja2
+
+django-registration>=1.0
+
+django-bootstrap-form
+django-bootstrap3
+# for editing html text
+django-tinymce
+
+reportlab
+pisa
+html5lib
+pypdf
+
+django-dbtemplates
+django-report-builder
+
+pygeocoder
+
+wand
+
+# to get user IP address
+# django-ipware
+# to extract top-level domain
+tldextract
+
+python-social-auth

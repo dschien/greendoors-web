@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
+{% endblock css %}
+{% block page_title %}Digital Greendoors{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+    <p>You can download the Greendoors app for iPhone and Android smartphones and tablets by using the links on the
+        right. You can also use the app in your web browser by clicking <a target="_blank"
+                                                                           href="{% url 'bristol2014:app' %}">here</a>.
+    </p>
+
+    <p>You can earn gift vouchers for testing the Greendoors app during the event. Register the app or contact <a
+            href="mailto:elaine.massung@bristol.ac.uk">Elaine</a> for more information.</p>
+{% endblock content %}

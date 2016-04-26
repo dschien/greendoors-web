@@ -1,0 +1,4 @@
+{
+  "templates/base-name.html": "templates/base-<%= name %>.html",
+  "templates/name/": "templates/<%= name %>/"
+}

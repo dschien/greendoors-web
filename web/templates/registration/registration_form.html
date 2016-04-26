@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{#{% load bootstrap %}#}
+{% load bootstrap3 %}
+{% load i18n %}
+{% block page_title %}Digital Greendoors{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+{% block content %}
+
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="col-xs-8">#}
+{#                <div class="input-group">#}
+                    <form method="post" action=".">
+{#                        {% csrf_token %}#}
+{#                        {{ form|bootstrap }}#}
+{##}
+{#                        <input class="btn btn-primary" type="submit" value="{% trans 'Submit' %}"/>#}
+                        {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+    {% endbuttons %}
+                    </form>
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{% endblock content %}

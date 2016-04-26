@@ -1,0 +1,22 @@
+{% extends "base-<%= name %>.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+{% block page_title %}<%= webtitle %>{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+
+    <!-- main content -->
+    <div class="col-md-12">
+
+
+        <p>Please email <a href="mailto:Elaine.Massung@bristol.ac.uk">Elaine</a> if you would like to take part in the research project, or if you have any queries about the app.</p>
+    </div>
+</div>
+
+{% endblock %}

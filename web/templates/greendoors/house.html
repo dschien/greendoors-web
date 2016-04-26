@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page_title %}Greendoors{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+    {% if error_message %}
+        <div id="demo_alert" class="alert alert-block alert-info">
+            <a class="close" data-dismiss="alert" href="#" onclick="hide_element('demo_alert');">x</a>
+            <h4 class="alert-heading">Info</h4>
+            {{ error_message }}
+            <br>
+            <a class="btn small" href="#" onclick="hide_element('demo_alert');">Close</a>
+        </div>
+    {% endif %}
+
+    <h1>House {{ house.id }}</h1>
+    <p>Address: {{ house.address }}</p>
+    <img alt="Embedded Image" src="data:image/jpeg;base64,{{ image.img_data  }}"  />
+
+{% endblock %}

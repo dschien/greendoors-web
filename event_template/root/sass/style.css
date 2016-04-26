@@ -1,0 +1,12 @@
+.app-icons {
+  padding-left: 20px; }
+
+.itunes_icon {
+  display: inline-block;
+  overflow: hidden;
+  background: url(http://development-linkmaker.itunes.awcloud.net//htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;
+  width: 135px;
+  height: 40px; }
+  @media only screen {
+    .itunes_icon {
+      background-image: url(http://development-linkmaker.itunes.awcloud.net//htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg); } }

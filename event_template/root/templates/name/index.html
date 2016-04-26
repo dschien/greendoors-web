@@ -1,0 +1,112 @@
+{% extends "base-<%= name %>.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+{% block page_title %}<%= webtitle %>{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+    <h1><%= display_name %> at the University of Bristol</h1>
+    <p>Connecting people. Saving energy. Opening Doors</p>
+    <div class="jumbotron">
+
+
+        <div class="row">
+            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+                <a href="{% url '<%= name %>:app' %}" class="thumbnail">
+                    <img src="{% static '<%= name %>/img/icon.png' %}" alt="...">
+                </a>
+            </div>
+            <div class="col-xs-8  col-sm-7 col-md-10  col-lg-10">
+                <h3>Plan your visit with the browser app.</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Get the apps for your phone!</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <p class="app-icons">
+                    <a href="https://itunes.apple.com/gb/app/frome-greendoors/id825089255?mt=8" target="itunes_store">
+
+                        <img alt="Get it on itunes store"
+                             src="http://development-linkmaker.itunes.awcloud.net//htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png"/>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=uk.ac.bris.cs.greendoors.frome"
+                       target="play_store">
+                        <img alt="Get it on Google Play"
+                             src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"/>
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <!-- main content -->
+        <div class="col-md-12">
+            <p> The Digital Green Doors team from the University of Bristol’s Department of Computer Science is
+                currently
+                investigating how technology can be used to help people gather information about retrofitting when
+                attending
+                open home events such as <a href="http://www.bristolgreendoors.org/">Bristol Green Doors</a> or <a
+                        href="http://freco.org/">Frome Open Homes</a>.</p>
+
+            <p>
+                This has resulted in the development of a smartphone application for iPhone and Android that provides a
+                number of features to visitors both during and after the event
+            <ul>
+                <li>
+                    <b>Mapping and routing:</b> Users are able to see the location of participating houses and plan
+                    their routes.
+                </li>
+                <li><b>House Details:</b> Visitors can get an overview of the measures installed at a house before they
+                    arrive.
+                </li>
+                <li><b>Note-taking:</b> Notes can be saved to individual houses for later review.</li>
+                <li><b>Save Favourites:</b> Individual houses can be saved to a shortlist; for example, users can save
+                    the houses
+                    they plan to visit, or ones they wish to contact later.
+                </li>
+
+                <li><b>Contact:</b> If a user has a question about a measure after their visit, they can use the app to
+                    send an
+                    email message to the householder. Privacy of both the householder and the app user is protected.
+                </li>
+                <li><b>Filtering:</b> Houses can be filtered by specific measure, size, location, and opening day.</li>
+                <li><b>Scan and Save:</b> Using the <a href="qrcodes.html">QR Scanner</a> within the app, users can scan
+                    QR codes at houses that are
+                    associated with particular measures. After the event, a <a href="reports.html">report</a> about
+                    these measures will be sent to the
+                    user.
+                </li>
+            </ul>
+            </p>
+            <p>
+                The most recent version of the Greendoors app will be available to download from 20 February. If you are
+                planning to visit Frome Open Homes and would like to take part in our research project about the app,
+                please
+                contact <a href="mailto:Elaine.Massung@bristol.ac.uk">Elaine</a>. You will have the opportunity to earn
+                gift vouchers for your participation.
+            </p>
+        </div>
+    </div>
+
+
+
+    {#            <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>#}
+
+
+
+{% endblock %}

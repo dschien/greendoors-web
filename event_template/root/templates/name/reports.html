@@ -1,0 +1,36 @@
+{% extends "base-<%= name %>.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+{% block page_title %}<%= webtitle %>{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+
+    <div class="row">
+
+        <!-- main content -->
+        <div class="col-md-12">
+
+
+            <p> Information provided by the householder will be used to create a personalised report for each user. It
+                will
+                include details about the retrofitting measures scanned, general information about items of interest,
+                and
+                any notes taken during the event.</p>
+
+            <p>Below is an example of a report produced for the <a href="http://www.bristolgreendoors.org/">Bristol
+                Green Doors</a> event.</p>
+
+            <object data={% static '<%= name %>/assets/DGD Sample Report.pdf' %} type="application/pdf" width="800"
+                    height="1000">
+                alt : <a href="{% static '<%= name %>/assets/DGD Sample Report.pdf' %}">Sample Report.pdf</a>
+            </object>
+
+
+        </div>
+    </div>
+{% endblock %}

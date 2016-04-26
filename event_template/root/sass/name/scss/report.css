@@ -1,0 +1,26 @@
+.report-measure-table tr {
+  border-bottom: 1px solid #000000; }
+
+.measure-name {
+  font-weight: 600;
+  color: green; }
+
+.note-list {
+  list-style: none; }
+
+.table-header {
+  font-weight: bold; }
+
+.address {
+  font-weight: bold; }
+
+.more-info-header {
+  font-weight: bold; }
+
+.sponsor-icon {
+  height: 100px;
+  margin-bottom: 10px; }
+
+.measure {
+  margin-bottom: 30px;
+  border: 1px solid #eee; }

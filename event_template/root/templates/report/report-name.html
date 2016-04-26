@@ -1,0 +1,184 @@
+{% extends "base-swilt.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block page_title %}Report{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'swilt2014/scss/report.css' %}">
+{% endblock %}
+{% block content %}
+
+    <h1>Hi {{ user.username }}!</h1>
+    <div class=""></div>
+
+    <div class="row">
+        <div class="col-xs-6 col-md-9">
+            <p>Thank you for taking part in this year's South Wiltshire Green Doors event. You visited {{ visit_count }}
+                houses
+                over the
+                weekend and scanned {{ user.south_wiltshire_2014_scan.all | length }} QR codes.</p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <img src="{% static 'swilt2014/img/greendoors_155.png' %} " alt="...">
+        </div>
+{#        <div class="col-xs-3 col-md-1">#}
+{#            <img src="{% static 'swilt2014/img/oh_63.png' %} " alt="...">#}
+{#        </div>#}
+
+
+    </div>
+
+
+    {% if has_renewable %}
+        {% include "renewable.html" %}
+    {% endif %}
+
+    <h2>Measures</h2>
+
+
+    {% for measure, installedMeasures in measures.items %}
+        <div class="measure">
+            <table class="table table-striped table-hover">
+                <tr>
+                    <td class="measure-name">{{ measure.short }}    </td>
+                    <td class="table-header">Supplier/ Product</td>
+                    <td class="table-header">Cost</td>
+{#                    <td class="table-header">Disruption</td>#}
+                </tr>
+                {% for installedMeasure in installedMeasures %}
+                    <tr>
+                        <td>
+                            <span class="address">House {{ installedMeasure.house.pk }}</span>
+                            {{ installedMeasure.text }}    </td>
+                        <td>
+
+                            <p>{% if installedMeasure.supplier_template %}
+                                {% include installedMeasure.supplier_template.name %}
+                            {% endif %}</p>
+                            /
+                            <p>{% if installedMeasure.product_template %}
+                                {% include installedMeasure.product_template.name %}
+                            {% endif %}</p>
+
+                        <td>{% if installedMeasure.cost %}{{ installedMeasure.cost }}{% endif %}</td>
+{#                        <td>{% if installedMeasure.disruption %}{{ installedMeasure.disruptionText }}{% endif %}</td>#}
+                    </tr>
+                    {% if installedMeasure.report_text %}
+                        <tr class="hidden"></tr>
+                        <tr>
+                            <td colspan="4">{{ installedMeasure.report_text }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+            {% if measure.report_template %}
+                {% include measure.report_template %}
+            {% endif %}
+            {#            <hr class="measure-hr">#}
+        </div>
+    {% endfor %}
+
+
+    {% if final_thoughts %}
+        <h2>Householder Final Thoughts</h2>
+
+
+        <table class="table table-striped table-hover">
+            <tr>
+                Final Thoughts from South Wiltshire Green Doors Participants
+            </tr>
+            {% for house_id, final_notes in final_thoughts.items %}
+                <tr>
+                    <td>
+                        <span class="house-id">House {{ house_id }}</span>
+                    </td>
+                    <td>
+                        <p>{{ final_notes | safe }}</p>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    {% endif %}
+
+
+    <h2>Notes</h2>
+
+    You wrote the following notes over the weekend:
+    <ul class="note-list">
+        {% for note in notes %}
+            <li>
+                <span> {{ note.house.address }}</span>
+
+                <p>{{ note.text }}</p>
+            </li>
+        {% empty %}
+            Sorry, you don't seem to have any notes.
+        {% endfor %}
+    </ul>
+
+    <h2>Ready to retrofit? Don't forget:</h2>
+    <ul>
+        <li>Is your installer part of the Microgeneration Certification Scheme? Check for MCS verification:
+            {% trackurl 'http://www.microgenerationcertification.org/' %}
+        </li>
+
+        <li>Want to learn more about the Green Deal?
+            {% trackurl 'https://www.gov.uk/green-deal-energy-saving-measures/how-the-green-deal-works' %}
+        </li>
+    </ul>
+    <h2>Easy Fixes</h2>
+
+    <p>
+        There are a number of simple things you can do around the house to save energy and money. Check out the
+        following
+        pages
+        for more information:
+    <ul>
+        <li>
+            Bristol Green Doors: {% trackurl 'http://www.bristolgreendoors.org/next-steps/quick-wins' %}
+        </li>
+        <li>Centre for Sustainable Energy: {% trackurl 'http://www.cse.org.uk/advice/energy-saving' %}</li>
+    </ul>
+    </p>
+
+    <h2>A Final Word</h2>
+
+    <p>All views expressed by householders should be considered as opinion specific to their situation. South Wiltshire
+        Green Doors
+        and Digital Green Doors cannot offer advice on retrofitting: we let the householders speak for themselves.</p>
+
+    <p>This is sent to you as part of the Digital Green Doors project. For more information and to view our privacy
+        policy, please see our <a href="https://greendoors.cs.bris.ac.uk/">website.</a></p>
+
+
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+
+            <div class=" sponsor-icon"><a href="{% trackurl-raw 'http://www.wiltshire.gov.uk/' %}">
+                <img src="{% static 'swilt2014/img/WiltshireCouncil.jpg' %} " alt="..." width="152">
+            </a></div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <div class="sponsor-icon">
+                <a href="{% trackurl-raw 'http://www.wiltoncommunitylandtrust.org.uk/' %}">
+                    <img src="{% static 'swilt2014/img/Wilton.jpg' %} " alt="..." width="152">
+                </a></div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <div class="sponsor-icon">
+                <a href="{% trackurl-raw 'http://www.greenopenhomes.net/' %}">
+                    <img src="{% static 'swilt2014/img/GreenOpenHomes.jpg' %} " alt="..." width="152">
+                </a></div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+            <div class="sponsor-icon">
+                <a href="{% trackurl-raw 'http://www.seacs.info' %}"
+                        >
+                    <img src="{% static 'swilt2014/img/SEACS.jpg' %} " alt="..." width="152">
+                </a></div>
+        </div>
+    </div>
+
+{% endblock %}

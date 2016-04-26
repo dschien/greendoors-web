@@ -1,0 +1,84 @@
+.title {
+  float: left;
+  font-size: 28px;
+  color: #333; }
+
+.subtitle {
+  float: right;
+  font-size: 16px;
+  font-style: italic;
+  text-align: right;
+  margin-top: 20px; }
+
+#banner_pic {
+  margin-bottom: 3px; }
+
+.bgd-navbar {
+  background-color: #9FCE63;
+  margin-top: 20px; }
+
+ul.nav > li.active {
+  background-color: olivedrab; }
+
+li.nav-item a {
+  color: #000000; }
+  li.nav-item a i {
+    font-weight: bold; }
+
+.navbar .nav {
+  margin: 0;
+  display: table;
+  width: 100%; }
+
+.navbar .nav > li {
+  display: table-cell;
+  width: 20%;
+  float: none;
+  text-align: center; }
+
+.user-menu {
+  float: right;
+  margin-top: 10px; }
+
+.content {
+  font-size: 16px; }
+
+.highlight {
+  font-weight: bold; }
+
+.box {
+  background-color: #9FCE63;
+  max-width: 160px;
+  padding-bottom: 5px; }
+
+.box-content {
+  background-color: white;
+  margin: 5px 5px; }
+  .box-content p {
+    margin-left: 10px; }
+
+@media screen and (max-width: 473px) {
+  #bgd-event-banner {
+    display: none; }
+
+  /* hide it elsewhere */ }
+.box-title {
+  padding-left: 40px; }
+
+.fb-follow {
+  bottom: 6px; }
+
+footer {
+  margin-top: 35px;
+  font-size: 12px; }
+  footer hr {
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-top: 8px;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.app-icons {
+  float: right; }

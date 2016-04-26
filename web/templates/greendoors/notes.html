@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block page_title %}Greendoors Mail{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+{% block head %}
+    <script type="text/javascript" src="{{ STATIC_URL }}/css/notes.css"></script>
+{% endblock %}
+
+{% block content %}
+
+    {% if error_message %}
+        <div id="demo_alert" class="alert alert-block alert-info">
+            <a class="close" data-dismiss="alert" href="#" onclick="hide_element('demo_alert');">x</a>
+            <h4 class="alert-heading">Info</h4>
+            {{ error_message }}
+            <br>
+            <a class="btn small" href="#" onclick="hide_element('demo_alert');">Close</a>
+        </div>
+    {% endif %}
+
+    <h2>Notes for houses</h2>
+
+    <aside>
+                <ul>
+            {% for note in object_list %}
+                <li>
+                    <div>
+                        {#                    <a href="{% url 'web:note' pk=note.pk %}">{{ note.house.address }}</a>#}
+                        <h3>{{ note.house.address }}</h3>
+                        <p>{{ note.text }}</p>
+                        <button class="btn btn-primary" onclick="window.location='{% url 'web:note' pk=note.pk %}'">Edit</button>
+                    </div>
+                </li>
+
+            {% endfor %}
+        </ul>
+    </aside>
+
+
+
+
+{% endblock %}

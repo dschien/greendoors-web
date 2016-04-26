@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    {% csrf_token %}
+
+    <div id="demo_alert" class="alert alert-block alert-success">
+{#        <a class="close" data-dismiss="alert" href="#" onclick="hide_element('demo_alert');">x</a>#}
+        <h4 class="alert-heading">Success</h4>
+
+        <p>{% trans "Logged out" %}</p>
+        <br>
+{#        <a class="btn small" data-dismiss="alert" href="#" onclick="hide_element('demo_alert');">Close</a>#}
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block page_title %}Digital Greendoors{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+    {% if error_message %}
+        <div id="demo_alert" class="alert alert-block alert-info">
+            <a class="close" data-dismiss="alert" href="#" onclick="hide_element('demo_alert');">x</a>
+            <h4 class="alert-heading">Info</h4>
+            {{ error_message }}
+            <br>
+            <a class="btn small" href="#" onclick="hide_element('demo_alert');">Close</a>
+        </div>
+    {% endif %}
+
+
+    <h1>Digital Greendoors</h1>
+
+    <p>This is the website for the Digital Greendoors Research Project</p>
+
+    <iframe width="560" height="315" src="//www.youtube.com/embed/p_huiaIT8bM?rel=0" frameborder="0"
+            allowfullscreen></iframe>
+
+    <div class="row" style="padding-top: 20px">
+        {% for group in user.groups.all %}
+            {% if group.name == 'bristol2014_admin' %}
+                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+                    <a href="{% url 'bristol2014:home' %}" class="thumbnail">
+                        <img src="{% static 'bristol2014/img/icon.jpg' %} " alt="..." width="152">
+                    </a>
+
+                    <div class="caption">
+                        <h3>Bristol Green Doors 2014</h3>
+
+                        <p>Event Septeber 2014.</p>
+
+                        <p><a href="{% url 'bristol2014:home' %}" class="btn btn-primary" role="button">Visit</a></p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+            <a href="{% url 'swilt2014:home' %}" class="thumbnail">
+                <img src="{% static 'swilt2014/img/icon.png' %} " alt="..." width="152">
+            </a>
+
+            <div class="caption">
+                <h3>South Wiltshire Green Doors</h3>
+
+                <p>Event on the 17/18th May.</p>
+
+                <p><a href="{% url 'swilt2014:home' %}" class="btn btn-primary" role="button">Visit</a></p>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+            <a href="{% url 'frome2014:home' %}" class="thumbnail">
+                <img class="expired-img" src="{% static 'frome2014/img/icon.png' %} " alt="..." width="152">
+            </a>
+
+            <div class="caption">
+                <h3>Frome Open Homes</h3>
+
+                <p>Event on the 15/16th March.</p>
+
+                <p><a href="{% url 'frome2014:home' %}" class="btn btn-primary" role="button">Read about it</a></p>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+            <a href="{% url 'bristol2013:home' %}" class="thumbnail">
+                <img class="expired-img" src="{% static 'bristol2013/img/icon.jpg' %} " alt="..." width="152">
+            </a>
+
+            <div class="caption">
+                <h3>Bristol Green Doors 2013</h3>
+
+                <p>Past event on the 28th September.</p>
+
+                <p><a href="{% url 'bristol2013:home' %}" class="btn btn-primary" role="button">Read about it</a></p>
+            </div>
+        </div>
+    </div>
+
+    {#            <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>#}
+
+
+
+{% endblock %}

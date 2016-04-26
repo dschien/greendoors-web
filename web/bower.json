@@ -1,0 +1,23 @@
+{
+  "name": "greendoors-web",
+  "version": "0.0.1",
+  "main": "templates/index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "underscore": "~1.6.0",
+    "bootstrap": "~3.1.1"
+  },
+  "install": {
+    "path": "lib",
+    "sources": {
+
+    }
+  }
+}

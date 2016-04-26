@@ -1,0 +1,10 @@
+{% load i18n %}
+{% trans "Activate account at" %} {{ site.name }}:
+
+Welcome to Digital Greendoors.
+
+Please click on the following link to verify your email address:
+
+https://{{ site.domain }}{% url 'registration_activate' activation_key %}
+
+{% blocktrans %}Link is valid for {{ expiration_days }} days.{% endblocktrans %}

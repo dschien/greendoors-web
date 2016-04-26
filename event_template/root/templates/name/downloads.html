@@ -1,0 +1,51 @@
+{% extends "base-<%= name %>.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+{% block page_title %}<%= webtitle %>{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+
+    <h1>Available for download Now!</h1>
+
+    <p>See the app in your  <a href="{% url '<%= name %>:app' %}">browser</a>, or download it for your phone</p>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+
+                <div class="col-xs-8 col-md-6">
+                    <p class="app-icons">
+
+                        <a href="https://itunes.apple.com/gb/app/greendoors/id699400945?mt=8&uo=4"
+                           target="itunes_store">
+                            <img alt="Get it on itunes store"
+                                 src="http://development-linkmaker.itunes.awcloud.net//htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png"/>
+                        </a>
+
+
+                        <a href="https://play.google.com/store/apps/details?id=uk.ac.bris.cs.greendoors">
+                            <img alt="Get it on Google Play"
+                                 src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"/>
+                        </a>
+
+                </div>
+
+
+                <div class="col-xs-6 col-md-2">
+                    <a href="/static/<%= name %>/app/index.html" class="thumbnail">
+                        <img src="{% static '<%= name %>/img/icon.png' %}" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <h3>Plan your visit with the browser app.</h3>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

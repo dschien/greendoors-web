@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% load bootstrap3 %}
+{% block content %}
+
+    <p>If you have already registered the Greendoors app, please log in to access a personalised report about the
+        retrofitting measures you scanned during Bristol Green Doors (13-14 September). Otherwise <a
+                href="{% url 'registration_register' %}">register here.</a></p>
+    <form method="post" action=".">
+        {% csrf_token %}
+{% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">
+            Log in
+        </button>
+    {% endbuttons %}
+
+{#        <input class="btn btn-primary" type="submit" value="{% trans 'Log in' %}"/>#}
+        <input type="hidden" name="next" value="{{ next }}"/>
+    </form>
+
+    <p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
+    <p>Or login with Facebook or Google+ instead:</p>
+
+    {#    {% if user and user.is_anonymous %}#}
+    <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
+        <!-- build:template -->
+        <img src="{{ STATIC_URL }}img/active_200@2x.png" height="45">
+        <!-- /build -->
+    </a>
+    <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">
+        <!-- build:template -->
+        <img src="{{ STATIC_URL }}img/google_signin.png" height="45">
+        <!-- /build -->
+    </a>
+
+    {#        <li>#}
+    {#            <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a>#}
+    {#        </li>#}
+    {#    {% endif %}#}
+
+
+{% endblock %}

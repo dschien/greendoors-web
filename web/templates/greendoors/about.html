@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
+{% endblock css %}
+{% block page_title %}Digital Greendoors{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+
+    <iframe width="400" height="250" src="//www.youtube.com/embed/p_huiaIT8bM?rel=0" frameborder="0"
+            allowfullscreen></iframe>
+
+    <p> Household retrofitting has been shown to reduce domestic energy use by 45-80%. However, a common barrier to
+        uptake is lack of reliable, non-technical information. Eco open home events like <a
+                href="http://www.bristolgreendoors.org/">Bristol Green Doors</a> try to
+        overcome this by connecting householders with would-be retrofitters. This allows the visitors to see the
+        retrofitting measures in action, as well as ask householders questions, like:</p>
+    <ul>
+        <li>What advantages or disadvantages are there to a particular retrofit measure?</li>
+        <li>What have the results been like?</li>
+        <li>What lessons did the householder learn, or what do they wish they had done differently?</li>
+    </ul>
+
+    <p> But how can this information be useful to visitors during the open day and beyond? Working with a number of eco
+        home events, Digital Green Doors has developed an application for Apple and Android smartphones and tablets, as
+        well as an in-browser version. It has a number of features:</p>
+
+    <ul>
+        <li><span class="highlight">Mapping and routing</span>: Users are able to see the location of participating
+            houses and plan their
+            routes.
+        </li>
+        <li><span class="highlight">House Details</span>: Visitors can get an overview of the measures installed at a
+            house before they arrive.
+        </li>
+        <li><span class="highlight">Note-taking</span>: Notes can be saved to individual houses for later review.</li>
+        <li><span class="highlight">Save Favourites</span>: Individual houses can be saved to a shortlist; for example,
+            users can save the houses they
+            plan to visit, or ones they wish to contact later.
+        </li>
+        <li><span class="highlight">Contact</span>: If a user has a question about a measure after their visit, they can
+            use the app to send an email
+            message to the householder. Privacy of both the householder and the app user is protected.
+        </li>
+        <li><span class="highlight">Filtering</span>: Houses can be filtered by specific measure, size, location, and
+            opening day.
+        </li>
+        <li><span class="highlight">Scan and Save</span>: Using the QR Scanner within the app, users can scan QR codes at houses that are associated with particular measures.  Log in to this website after the event to access the report.
+        </li>
+    </ul>
+
+
+{% endblock content %}

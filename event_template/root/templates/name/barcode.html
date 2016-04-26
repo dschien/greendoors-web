@@ -1,0 +1,45 @@
+{% extends "base-<%= name %>.html" %}
+{% load i18n %}
+{% block page_title %}Greendoors{% endblock %}
+{% block body_class %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+
+
+        <h1>This is not the page you're looking for</h1>
+
+        <p>You didn't scan the barcode with the app.</p>
+
+        {% if house %}
+
+            <span>{{ house }}</span>
+            <span>{{ measurement }}</span>
+
+            <div></div>
+        {% endif %}
+
+        <h2>Get the App!</h2>
+
+    </div>
+    <div class="row">
+        <p>
+            <a href="https://itunes.apple.com/gb/app/greendoors/id699400945?mt=8&uo=4" target="itunes_store"
+               style="display:inline-block;overflow:hidden;background:url(http://development-linkmaker.itunes.awcloud.net//htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(http://development-linkmaker.itunes.awcloud.net//htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a>
+        </p>
+
+        <p>
+
+            <a href="https://play.google.com/store/apps/details?id=uk.ac.bris.cs.greendoors">
+                <img alt="Get it on Google Play"
+                     src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"/>
+            </a>
+        </p>
+    </div>
+
+    {#            <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>#}
+
+
+
+{% endblock %}

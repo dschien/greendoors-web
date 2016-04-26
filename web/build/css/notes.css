@@ -1,0 +1,185 @@
+/* Put your CSS here */
+/* line 2, ../../scss/notes.scss */
+html, body {
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+/* line 7, ../../scss/notes.scss */
+.loading {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: -50px;
+  margin-top: -25px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* line 24, ../../scss/notes.scss */
+aside {
+  float: left;
+  background-color: #f7f7f7;
+  width: 180px;
+  height: 430px;
+  border: 1px solid #cccccc;
+}
+
+/* line 32, ../../scss/notes.scss */
+aside ul {
+  list-style-type: none;
+}
+
+/* line 36, ../../scss/notes.scss */
+aside ul li {
+  padding-bottom: 10px;
+}
+
+/* line 40, ../../scss/notes.scss */
+aside h2 {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-shadow: 1px 1px 0 #eee;
+  padding: 15px;
+  margin-bottom: 0;
+}
+
+/* line 50, ../../scss/notes.scss */
+aside a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+
+/* line 57, ../../scss/notes.scss */
+aside a.active {
+  background-color: #eeeeee;
+}
+
+/* line 61, ../../scss/notes.scss */
+aside a:hover {
+  background-color: #eee;
+  border-bottom: 0;
+}
+
+/* line 66, ../../scss/notes.scss */
+span.count {
+  float: right;
+  color: #505f71;
+  padding: .2em .2em;
+  border-radius: 40%;
+  font-size: 1.1em;
+  position: relative;
+  top: -3px;
+}
+
+/* line 76, ../../scss/notes.scss */
+section.main {
+  height: 430px;
+  border-bottom: 1px solid #ccc;
+  margin-left: 180px;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
+}
+
+/* line 84, ../../scss/notes.scss */
+.index {
+  padding-top: 5em;
+  text-align: center;
+  height: 100%;
+}
+
+/* line 90, ../../scss/notes.scss */
+table {
+  /*width: 100%;*/
+  border-bottom: 1px solid #999;
+  border-collapse: collapse;
+}
+
+/* line 96, ../../scss/notes.scss */
+td, th {
+  padding: 0.5em;
+}
+
+/* line 100, ../../scss/notes.scss */
+th {
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+/* line 105, ../../scss/notes.scss */
+tr {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* line 110, ../../scss/notes.scss */
+td a {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* line 115, ../../scss/notes.scss */
+tr.active {
+  background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #7db9e8), color-stop(100%, #267dc9));
+  background: -webkit-linear-gradient(top, #7db9e8, #267dc9);
+  background: -moz-linear-gradient(top, #7db9e8, #267dc9);
+  background: -o-linear-gradient(top, #7db9e8, #267dc9);
+  background: linear-gradient(top, #7db9e8, #267dc9);
+  color: white;
+  text-shadow: 1px 1px 0 #666666;
+}
+
+/* line 125, ../../scss/notes.scss */
+.mailbox-index {
+  padding-top: 5em;
+  text-align: center;
+  color: #eee;
+  font-style: italic;
+}
+
+/* line 132, ../../scss/notes.scss */
+.mail {
+  padding: 1em;
+}
+
+/* line 136, ../../scss/notes.scss */
+dl {
+  width: 100%;
+  border-bottom: 1px solid #333;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+}
+
+/* line 143, ../../scss/notes.scss */
+dt {
+  font-weight: 700;
+  font-size: .8em;
+  width: 60px;
+}
+
+/* line 149, ../../scss/notes.scss */
+dd {
+  margin-bottom: 0.5em;
+}
+
+/* line 153, ../../scss/notes.scss */
+.url {
+  font-family: sans-serif;
+  padding: 0 0 2em .4em;
+  width: 100%;
+  height: 25px;
+  font-family: 'Maven Pro';
+  font-weight: 700;
+  text-transform: uppercase;
+}

@@ -1,0 +1,14 @@
+/* line 1, ../../scss/report.scss */
+.report-measure-table tr {
+  border-bottom: 1px solid #000000;
+}
+
+/* line 5, ../../scss/report.scss */
+.measure-name {
+  font-weight: 600;
+}
+
+/* line 9, ../../scss/report.scss */
+.note-list {
+  list-style: none;
+}
