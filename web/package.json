@@ -2,7 +2,7 @@
   "name": "greendoors-web",
   "version": "0.1.0",
   "devDependencies": {
-    "bower": "~0.10.0",
+    "bower": "~1.8.8",
     "grunt": "^0.4.5",
     "grunt-bower-task": "~0.2.3",
     "grunt-contrib-compass": "~0.4.0",
