@@ -1,4 +1,4 @@
-Django>=1.5,<1.6
+Django>=1.5,<1.12
 South>=1
 # MySQL-python
 psycopg2
