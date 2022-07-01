@@ -2,7 +2,7 @@ Django>=1.5,<1.6
 South>=1
 # MySQL-python
 psycopg2
-openPyxl==1.6.2
+openPyxl==2.4.2
 simplejson
 django-extensions
 # checkout restframework from own repo b/c booleanfield is broken

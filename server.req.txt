@@ -23,7 +23,7 @@ django-tinymce==1.5.1
 djangorestframework==2.3.7
 html5lib==0.99
 oauthlib==0.6.1
-openpyxl==1.6.2
+openpyxl==2.4.2
 pisa==3.0.33
 pyPdf==1.13
 pygeocoder==1.2.1.1
